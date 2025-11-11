@@ -1,0 +1,7 @@
+/.build
+/include
+build.log
+.config
+.config.old
+defconfig
+
