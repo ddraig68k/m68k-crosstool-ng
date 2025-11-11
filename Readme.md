@@ -56,6 +56,19 @@ To build the compiler under Windows, Crosstool-NG uses the MinGW compiler to pro
 sudo apt install mingw-w64 mingw-w64-tools binutils-mingw-w64-x86-64 gcc-mingw-w64-x86-64 g++-mingw-w64-x86-64 zlib1g-dev
 ```
 
+For building GDB, it needs posix thread support to build successfully. To make sure that mingw32 is using the correct compiler run the following and make sure the posix compiler is selected.
+```bash
+sudo update-alternatives --config x86_64-w64-mingw32-gcc
+sudo update-alternatives --config x86_64-w64-mingw32-g++
+```
+```
+  Selection    Path                                   Priority   Status
+------------------------------------------------------------
+  0            /usr/bin/x86_64-w64-mingw32-g++-win32   60        auto mode
+* 1            /usr/bin/x86_64-w64-mingw32-g++-posix   30        manual mode
+  2            /usr/bin/x86_64-w64-mingw32-g++-win32   60        manual mode
+```
+
 To build the compiler for Windows
 
 ```bash
