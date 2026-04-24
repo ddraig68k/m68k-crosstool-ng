@@ -53,7 +53,7 @@ You can now add `~/x-tools/m68k-elf/bin` to your PATH.
 To build the compiler under Windows, Crosstool-NG uses the MinGW compiler to produce Window native binaries. You will need to install them if needed.
 
 ```bash
-sudo apt install mingw-w64 mingw-w64-tools binutils-mingw-w64-x86-64 gcc-mingw-w64-x86-64 g++-mingw-w64-x86-64 zlib1g-dev
+sudo apt install mingw-w64 mingw-w64-tools binutils-mingw-w64-x86-64 gcc-mingw-w64-x86-64 g++-mingw-w64-x86-64 zlib1g-dev libtool-bin libtool-doc
 ```
 
 For building GDB, it needs posix thread support to build successfully. To make sure that mingw32 is using the correct compiler run the following and make sure the posix compiler is selected.
